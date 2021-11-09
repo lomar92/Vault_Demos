@@ -20,7 +20,7 @@ VAULT_TOKEN=<Wrapping Token> vault unwrap
 # Same with the API, 5mins
 curl -H "X-Vault-Token: ${VAULT_TOKEN}" -H "X-Vault-Wrap-TTL: 5m" "http://127.0.0.1:8200/v1/secret/data/mysecret"
 
-#wrapping_token:                 s.QMQyMCAB0cyxOTNA9kFYuKB9
+#wrapping_token:                 <your wrapped token>
 #wrapping_accessor:               xENzgSgSYSOwWfS1htBa5JRT
 
 #Lookup Wrapped Token
@@ -51,7 +51,7 @@ OR
 
 VAULT_TOKEN=<Wrapping Token> vault unwrap
 
-curl -X POST -H "X-Vault-Token:$VAULT_TOKEN" -d '{"token":"5259ae36-f228-b873-6ac6-f6618d5db746"}' $VAULT_ADDR/v1/sys/wrapping/unwrap
+curl -X POST -H "X-Vault-Token:$VAULT_TOKEN" -d '{"token":"your wrapped token"}' $VAULT_ADDR/v1/sys/wrapping/unwrap
 
 --------------------------
 
