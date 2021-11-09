@@ -6,3 +6,7 @@ Benchmarking/*
 
 #Enterprise License
 license.hclic
+
+
+*__pycache__*
+*pyc
