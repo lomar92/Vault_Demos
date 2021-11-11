@@ -18,7 +18,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "01_versioned-static-secrets", destination: "$HOME/01_versioned-static-secrets"
   config.vm.provision "file", source: "05_dynamic-database-secrets", destination: "$HOME/05_dynamic-database-secrets"
   config.vm.provision "file", source: "08_MFA", destination: "$HOME/08_MFA"
-  config.vm.provision "file", source: "transit-app", destination: "$HOME/transit-app"
+  config.vm.provision "file", source: "09_transit-app", destination: "$HOME/09_transit-app"
   config.vm.provision "file", source: "acme.json", destination: "$HOME/acme.json"
   config.vm.provision :shell, path: "bootstrap.sh"
   for i in 8200..8210
