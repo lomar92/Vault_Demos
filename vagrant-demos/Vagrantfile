@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
   config.vm.provision "file", source: "transit-app-example", destination: "$HOME/transit-app-example"
   config.vm.provision "file", source: "acme.json", destination: "$HOME/acme.json"
   config.vm.provision :shell, path: "bootstrap.sh"
-  for i in 8200..8207
+  for i in 8200..8210
     config.vm.network :forwarded_port, guest: i, host: i, host_ip: "127.0.0.1"
 end
   #config.vm.network :forwarded_port, guest: 8200, host: 8200
